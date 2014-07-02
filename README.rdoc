@@ -2,4 +2,4 @@
 
 http://proofofposition.com
 
-Proof of Position stores your real-world geographic location in the Bitcoin block chain. Who you are (Twitter handle) and where you were (lat / long) accessible to all future generations. Built on Chain.com.
+Proof of Position stores your real-world geographic location in the Bitcoin block chain. Who you are (Twitter handle) and where you were (lat / long) accessible to all future generations. Powered by Chain.com.
