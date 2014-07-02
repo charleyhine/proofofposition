@@ -1,0 +1,38 @@
+
+<script>
+  getGeoLocation();
+</script>
+
+<% if @stampable %>
+	    	<div class="row w centered">
+	    		<br>		
+	    		<div class="col-lg-6 col-lg-offset-3">
+					
+	    			<p>Welcome! Proof of Position stores your real-world geographic location in the Bitcoin block chain. <% if @lat_lng %>Your current location is <b><%= @lat_lng[0] + ', ' + @lat_lng[1] %></b>.<% end %></p>
+	    		</div>
+	    	</div>
+	    </div>
+		
+		<div class="row centered">
+			<div class="col-lg-4 col-lg-offset-4 ">
+				<% if @lat_lng %>
+					<a href="<%= stamp_path %>" class="btn btn-lg btn-block btn-social btn-reddit">
+					    <i class="fa fa-btc"></i> <center>Save to Block Chain</center>
+					</a>
+				<% else %>
+					Please 'allow' browser geolocation sniffing to use Proof of Position...
+				<% end %>
+			</div>
+		</div>
+ <% else %>
+ 	<div class="row w centered">
+ 		<br>		
+ 		<div class="col-lg-6 col-lg-offset-3">
+ 			<p> 
+			Done! Bitcoin transaction: <%= @last_tx.response %></br>
+			<b><%= @last_tx.metadata %></b></br>
+			See it on <%= link_to 'Chain.com', 'https://api.chain.com/v1/bitcoin/transactions/' + @last_tx.response + '/op-return?key=0be07002178974fd1944b3812ad928eb' %>.</p>
+ 		</div>
+ 	</div>
+ </div>
+ <% end %>

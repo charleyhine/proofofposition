@@ -1,0 +1,27 @@
+<h1>Listing transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Metadata</th>
+      <th>Response</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction.user_id %></td>
+        <td><%= transaction.metadata %></td>
+        <td><%= transaction.response %></td>
+        <td><%= link_to 'Show', transaction %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

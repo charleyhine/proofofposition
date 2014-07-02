@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transaction.user_id %>
+</p>
+
+<p>
+  <strong>Metadata:</strong>
+  <%= @transaction.metadata %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @transaction.response %>
+</p>
+
+<%= link_to 'Back', transactions_path %>

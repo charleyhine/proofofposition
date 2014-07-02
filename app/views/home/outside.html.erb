@@ -1,0 +1,21 @@
+
+	    	<div class="row w centered">
+	    		<br>		
+	    		<div class="col-lg-6 col-lg-offset-3">
+	    			<p>Ah, memories... Proof of Position stores your real-world geographic location in the Bitcoin block chain. Who you are (Twitter handle) and where you were (lat / long) accessible to all future generations.</p>
+	    		</div>
+	    	</div>
+	    </div>
+		
+		<div class="row centered">
+			<div class="col-lg-4 col-lg-offset-4 ">
+				
+			  	<% if user_signed_in? %>
+			  		<%= link_to "Sign out", destroy_user_session_path %> 
+			  	<% else %>
+						<a href="<%= user_omniauth_authorize_path(:twitter) %>" class="btn btn-lg btn-block btn-social btn-twitter">
+						    <i class="fa fa-twitter"></i> <center>Sign in with Twitter</center>
+						</a>
+			  	<% end %>
+			</div>
+		</div>
