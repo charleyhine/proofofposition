@@ -8,7 +8,7 @@ class Transaction < ActiveRecord::Base
   
   def bitcoin_transaction
     from_address = '1Bj5UVzWQ84iBCUiy5eQ1NEfWfJ4a3yKG1'
-    private_key = ENV['PRIVATE_KEY']
+    private_key = ENV['PRIVATE_KEY'] # Wallet import format (starts with a 5)
     to_address = '1JJynffTaq3bWcWTXnC4P68VMeNNHdVmMy'
 
     hex = Chain.build_metadata_transaction(from_address, private_key, to_address, self.metadata)
