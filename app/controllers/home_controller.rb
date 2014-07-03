@@ -13,13 +13,14 @@ class HomeController < ApplicationController
   def stamp
     if current_user.stampable?
       metadata = '@' + current_user.username + ',' + (sprintf "%.6f", @lat_lng[0]) + ',' + (sprintf "%.6f", @lat_lng[1])
-      
+    
       tx = Transaction.new
-      tx.user = user
+      tx.user = current_user
       tx.metadata = metadata
       tx.save
     end
     
     redirect_to :inside
   end
+  
 end

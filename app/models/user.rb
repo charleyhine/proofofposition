@@ -9,10 +9,8 @@ class User < ActiveRecord::Base
   def stampable?
     last_tx = self.transactions.last 
     
-    # If no txs else last tx in previous 2 hours
-    if last_tx.nil?
-      return true
-    elsif last_tx.created_at < Time.now - 2.hours 
+    # If no txs or last tx occured over 2 hrs ago
+    if last_tx.nil? || last_tx.created_at < Time.now - 2.hours 
       return true
     else
       return false
