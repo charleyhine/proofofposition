@@ -7,7 +7,11 @@ class HomeController < ApplicationController
   
   def inside
       @stampable = current_user.stampable?
-      @last_tx ||= current_user.transactions.last
+      @last_tx = current_user.transactions.last
+      
+      if @last_tx && @last_tx.response.nil? && @stampable == false
+        redirect_to '/500'
+      end
   end
   
   def stamp
@@ -18,6 +22,7 @@ class HomeController < ApplicationController
       tx.user = current_user
       tx.metadata = metadata
       tx.save
+      p tx.inspect
     end
     
     redirect_to :inside
