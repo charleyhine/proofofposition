@@ -22,7 +22,6 @@ class HomeController < ApplicationController
       tx.user = current_user
       tx.metadata = metadata
       tx.save
-      p tx.inspect
     end
     
     redirect_to :inside
