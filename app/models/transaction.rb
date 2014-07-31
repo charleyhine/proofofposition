@@ -9,7 +9,7 @@ class Transaction < ActiveRecord::Base
   def bitcoin_transaction
     from_address = '18Qi4yEQtVvSzDrapG6EWPFSumwdLWvZbJ'
     private_key = ENV['PRIVATE_KEY'] # Wallet import format (starts with a 5)
-    to_address = '1JJynffTaq3bWcWTXnC4P68VMeNNHdVmMy'
+    to_address = '18Qi4yEQtVvSzDrapG6EWPFSumwdLWvZbJ'
     
     p from_address
     p private_key
