@@ -7,9 +7,9 @@ class Transaction < ActiveRecord::Base
   before_create :bitcoin_transaction
   
   def bitcoin_transaction
-    from_address = '18Qi4yEQtVvSzDrapG6EWPFSumwdLWvZbJ'
+    from_address = '12RRxJijr65CYFbcRbBiGkvC9NG1KFQDS9'
     private_key = ENV['PRIVATE_KEY'] # Wallet import format (starts with a 5)
-    to_address = '18Qi4yEQtVvSzDrapG6EWPFSumwdLWvZbJ'
+    to_address = '12RRxJijr65CYFbcRbBiGkvC9NG1KFQDS9'
     
     p from_address
     p private_key
@@ -18,7 +18,7 @@ class Transaction < ActiveRecord::Base
 
     hex = Chain.build_metadata_transaction(from_address, private_key, to_address, self.metadata)
     
-    #self.response = Chain.send_transaction(hex) if Rails.env.production?
-    #self.response = "Testing" if Rails.env.development?  
+    self.response = Chain.send_transaction(hex) if Rails.env.production?
+    self.response = "Testing" if Rails.env.development?  
   end
 end
