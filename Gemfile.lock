@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/charleyhine/chain-ruby.git
-  revision: 20dc3601965b4e100b7650ef8ba7e01ea3f0c63f
+  revision: bde89c66e9080df01d56e88522b3c3d12c9f6010
   specs:
-    chain-ruby (0.0.11)
+    chain-ruby (0.0.18)
 
 GEM
   remote: https://rubygems.org/
@@ -38,10 +38,10 @@ GEM
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
+    coffee-script-source (1.7.1)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -51,11 +51,11 @@ GEM
     erubis (2.7.0)
     execjs (2.2.1)
     ffi (1.9.3)
-    font-awesome-rails (4.0.3.1)
+    font-awesome-rails (4.1.0.0)
       railties (>= 3.2, < 5.0)
-    hashie (2.1.2)
+    hashie (3.2.0)
     hike (1.2.3)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -70,8 +70,8 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     oauth (0.4.7)
-    omniauth (1.2.1)
-      hashie (>= 1.2, < 3)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
       rack (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
@@ -133,8 +133,8 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (0.3.39)
-    uglifier (2.5.1)
+    tzinfo (0.3.40)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
